@@ -1,0 +1,28 @@
+<ion-view view-title="Formulario de Contacto">
+    <ion-content>
+      
+      <form ng-submit="sendFormData(contact)" name="contactForm">
+        <div class="row">
+          <div class="col col-60 col-offset-20">
+            <div class="list">
+              <label class="item item-input item-floating-label">
+                <span class="input-label">Nombre</span>
+                <input type="text" placeholder="Nombre" ng-model="contact.name" required>
+              </label>
+              <label class="item item-input item-floating-label">
+                <span class="input-label">Email</span>
+                <input type="text" placeholder="Email" ng-model="contact.email" required>
+              </label>
+              <label class="item item-input item-floating-label">
+                <span class="input-label">Comentario</span>
+                <textarea placeholder="Comentario" ng-model="contact.comment" required></textarea>
+              </label>        
+            </div>
+            <div class="padding">
+              <button type="submit" class="button button-block button-positive" ng-disabled="contactForm.$invalid" >Enviar</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </ion-content>      
+</ion-view>
